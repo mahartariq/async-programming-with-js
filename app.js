@@ -1,10 +1,19 @@
-// simple sync 
+
 
 console.log("Trip to Ninja Web Developer");
 
-function learnHTML(){
-    console.log("Code HTML");
+function learnHTML(callback){
+    setTimeout(()=>{
+        console.log("Code HTML");
+        callback("html done what next");
+    },10)
 }
-learnHTML()
 
-console.log("Last Line");
+function callback(value){
+    console.log(value);
+}
+
+
+learnHTML(callback)
+
+console.log(" excitement overloaded ");
